@@ -492,9 +492,7 @@ export default function Home() {
             <p style={{ fontSize: "13px", color: "var(--text-muted)" }}>
               © {new Date().getFullYear()} Pamod Dhananjana — Kiribathgoda, Sri Lanka
             </p>
-            <p style={{ fontSize: "13px", color: "var(--text-muted)" }}>
-              Built with <span style={{ color: "var(--accent)" }}>Next.js</span> &amp; lots of ☕
-            </p>
+            
           </div>
         </footer>
       </main>
