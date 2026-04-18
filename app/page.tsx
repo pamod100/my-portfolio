@@ -266,8 +266,8 @@ export default function Home() {
                 <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
                   <a href="#contact" className="btn btn-primary">Let's work together</a>
                   <a
-                    href="/Pamod_Dhananjana_CV_2026.pdf"
-                    download="Pamod_Dhananjana_CV_2026.pdf"
+                    href="/Pamod_Dhananjana.pdf"
+                    download="Pamod_Dhananjana.pdf"
                     className="btn btn-outline"
                     style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}
                   >

@@ -46,7 +46,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#" style={{ fontFamily: "var(--font-heading)", fontWeight: 800, fontSize: "16px", color: "var(--text-primary)", letterSpacing: "-0.01em", display: "flex", alignItems: "center", gap: "6px" }}>
           <span style={{ color: "var(--accent)" }}>P.</span>
-          Pamod
+          dhananjana
         </a>
 
         {/* Desktop links */}
