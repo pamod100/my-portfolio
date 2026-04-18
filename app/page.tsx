@@ -102,9 +102,14 @@ export default function Home() {
     return () => window.removeEventListener("mousemove", move);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setFormSent(true);
+    const res = await fetch("https://formspree.io/f/mojydzbb", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formState),
+    });
+    if (res.ok) setFormSent(true);
   };
 
   return (
