@@ -9,13 +9,45 @@ import ProjectCard, { Project } from "@/components/ProjectCard";
 
 const projects: Project[] = [
   {
+    title: "AgriLease – Agricultural Machinery Rental Platform",
+    description:
+      "Final HND computing project. Web-based sharing economy marketplace connecting machine owners (Lessors) with farmers (Lessees) across Sri Lanka. Built with Vanilla PHP, MySQL, Tailwind CSS, and JavaScript. Designed and executed a 30-case black-box test plan; developed backend PHP API endpoints for fleet management, booking lifecycle, and the Lessor dashboard. Implemented OWASP security audits, PHP PDO prepared statements, and RBAC with session-based authentication.",
+    tags: ["PHP", "MySQL", "Tailwind CSS", "Leaflet.js", "Tesseract.js", "RBAC", "QA", "Agile/Scrum"],
+    year: "Nov 2025 – May 2026",
+    githubUrl: "https://github.com/pamod100",
+    images: [
+      "/projects/agrilease-1.png",
+      "/projects/agrilease-2.png",
+      "/projects/agrilease-3.png",
+      "/projects/agrilease-4.png",
+      "/projects/agrilease-5.png",
+      "/projects/agrilease-6.png",
+      "/projects/agrilease-7.png",
+      "/projects/agrilease-8.png",
+      "/projects/agrilease-9.png",
+      "/projects/agrilease-10.png",
+      
+    ],
+  },
+  {
     title: "KMC Event Management Platform",
     description:
       "SOA-based REST API + web client for the Kandy Municipal Council. Supports event creation/management, participant registration, and public search/filter by date and type. Implemented RBAC with organizer and public dashboards; enables third-party API integrations to eliminate manual data entry.",
     tags: ["ASP.NET Core", "C#", "REST API", "SQL Server", "JavaScript", "RBAC"],
-    year: "2025 – 2026",
+    year: "Feb – Apr 2026",
     githubUrl: "https://github.com/pamod100",
-    featured: true,
+    images: [
+      "/projects/kmc-1.png",
+      "/projects/kmc-2.png",
+      "/projects/kmc-3.png",
+      "/projects/kmc-4.png",
+      "/projects/kmc-5.png",
+      "/projects/kmc-6.png",
+      "/projects/kmc-7.png",
+      "/projects/kmc-8.png",
+      "/projects/kmc-9.png",
+      "/projects/kmc-10.png",
+    ],
   },
   {
     title: "Medicare Plus – Healthcare Web App",
@@ -24,7 +56,18 @@ const projects: Project[] = [
     tags: ["PHP", "MySQL", "JavaScript", "AJAX", "RBAC", "Bootstrap"],
     year: "Oct – Nov 2025",
     githubUrl: "https://github.com/pamod100",
-    featured: true,
+    images: [
+      "/projects/medicare-1.png",
+      "/projects/medicare-2.png",
+      "/projects/medicare-3.png",
+      "/projects/medicare-4.png",
+      "/projects/medicare-5.png",
+      "/projects/medicare-6.png",
+      "/projects/medicare-7.png",
+      "/projects/medicare-8.png",
+      "/projects/medicare-9.png",
+      "/projects/medicare-10.png",
+    ],
   },
   {
     title: "TechCare – Device Repair App",
@@ -33,7 +76,18 @@ const projects: Project[] = [
     tags: ["Java", "XML", "Android Studio", "SQLite", "Material Design", "GitHub"],
     year: "Dec 2025 – Jan 2026",
     githubUrl: "https://github.com/pamod100",
-    featured: true,
+    images: [
+      "/projects/techcare-1.png",
+      "/projects/techcare-2.png",
+      "/projects/techcare-3.png",
+      "/projects/techcare-4.png",
+      "/projects/techcare-5.png",
+      "/projects/techcare-6.png",
+      "/projects/techcare-7.png",
+      "/projects/techcare-8.png",
+      "/projects/techcare-9.png",
+      "/projects/techcare-10.png",
+    ],
   },
   {
     title: "BrainPath – Educational Roadmap App",
@@ -42,6 +96,7 @@ const projects: Project[] = [
     tags: ["Android Studio", "REST APIs", "JSON", "Agile/Scrum", "Jira", "Figma"],
     year: "Sep 2025 – Present",
     githubUrl: "https://github.com/pamod100",
+
   },
   {
     title: "Little Haven – Bookstore Management",
@@ -50,6 +105,18 @@ const projects: Project[] = [
     tags: ["Java", "MySQL", "JDBC", "CRUD", "OOP"],
     year: "Apr – Jul 2025",
     githubUrl: "https://github.com/pamod100",
+    images: [
+      "/projects/littlehaven-1.png",
+      "/projects/littlehaven-2.png",
+      "/projects/littlehaven-3.png",
+      "/projects/littlehaven-4.png",
+      "/projects/littlehaven-5.png",
+      "/projects/littlehaven-6.png",
+      "/projects/littlehaven-7.png",
+      "/projects/littlehaven-8.png",
+      "/projects/littlehaven-9.png",
+      "/projects/littlehaven-10.png",
+    ],
   },
   {
     title: "Furniture Village – Ordering System",
@@ -58,6 +125,7 @@ const projects: Project[] = [
     tags: ["C++", "OOP", "File Handling", "Menu-Driven Architecture"],
     year: "Feb – Mar 2025",
     githubUrl: "https://github.com/pamod100",
+  
   },
   {
     title: "TechVille Municipal Database System",
@@ -66,6 +134,7 @@ const projects: Project[] = [
     tags: ["MySQL", "SQL", "Schema Design", "Normalisation (3NF)", "Black-Box Testing"],
     year: "Jun 2025",
     githubUrl: "https://github.com/pamod100",
+    
   },
 ];
 
@@ -76,7 +145,7 @@ const skills = [
   },
   {
     category: "Web Development",
-    items: ["HTML5", "CSS3", "PHP", "AJAX", "ASP.NET Core", "Bootstrap", "Responsive Design"],
+    items: ["HTML5", "CSS3", "PHP", "AJAX", "ASP.NET Core", "Bootstrap", "Tailwind CSS"],
   },
   {
     category: "Mobile Development",
@@ -84,7 +153,7 @@ const skills = [
   },
   {
     category: "Tools & Methods",
-    items: ["Git", "GitHub", "Figma", "Postman", "Agile / Scrum", "Jira", "ClickUp"],
+    items: ["Git", "GitHub", "Figma", "Postman", "Agile / Scrum", "Jira", "ClickUp", "Black-Box Testing"],
   },
 ];
 
@@ -134,7 +203,6 @@ export default function Home() {
           }}
         >
           <div className="container">
-            {/* Two-column hero: left = text, right = photo */}
             <div style={{
               display: "grid",
               gridTemplateColumns: "1fr auto",
@@ -144,20 +212,17 @@ export default function Home() {
 
               {/* LEFT — text content */}
               <div>
-                {/* Status badge */}
                 <div className="fade-up" style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "6px 14px", background: "rgba(232,255,90,0.06)", border: "1px solid rgba(232,255,90,0.15)", borderRadius: "100px", marginBottom: "40px" }}>
                   <span className="glow-dot" />
                   <span style={{ fontSize: "12px", color: "var(--accent)", fontWeight: 500, letterSpacing: "0.06em" }}>
-                    Open to internships &amp; opportunities
+                    HND Graduate &amp; open to opportunities
                   </span>
                 </div>
 
-                {/* Name label */}
                 <p className="fade-up" style={{ fontFamily: "var(--font-body)", fontSize: "14px", fontWeight: 400, letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: "16px", animationDelay: "0.05s" }}>
                   Pamod Dhananjana
                 </p>
 
-                {/* Headline */}
                 <h1 className="fade-up" style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(52px, 8vw, 100px)", fontWeight: 800, lineHeight: 0.95, letterSpacing: "-0.03em", color: "var(--text-primary)", marginBottom: "32px", animationDelay: "0.1s" }}>
                   Software
                   <br />
@@ -166,14 +231,12 @@ export default function Home() {
                   </span>
                 </h1>
 
-                {/* Sub */}
                 <p className="fade-up" style={{ fontSize: "18px", lineHeight: 1.7, color: "var(--text-secondary)", maxWidth: "540px", marginBottom: "48px", animationDelay: "0.2s" }}>
-                  Software Engineering student specialising in Java, Android development,
-                  and full-stack web applications. Currently in my final semester at
-                  ICBT Campus — Cardiff Met University.
+                  HND graduate in Computer Software Engineering (ICBT Campus — Cardiff
+                  Metropolitan University), specialising in full-stack web development,
+                  Android apps, and QA engineering.
                 </p>
 
-                {/* CTAs */}
                 <div className="fade-up" style={{ display: "flex", gap: "16px", alignItems: "center", flexWrap: "wrap", animationDelay: "0.3s" }}>
                   <a href="#projects" className="btn btn-primary">
                     View projects
@@ -186,7 +249,6 @@ export default function Home() {
               </div>
 
               {/* RIGHT — profile photo */}
-              {/* Save your photo as /public/profile.jpg */}
               <div className="fade-up" style={{ animationDelay: "0.25s", flexShrink: 0 }}>
                 <div style={{
                   width: "280px",
@@ -206,7 +268,6 @@ export default function Home() {
                   />
                 </div>
               </div>
-
             </div>
           </div>
 
@@ -240,29 +301,28 @@ export default function Home() {
             <p className="section-label">About me</p>
 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "start" }} className="about-grid">
-              {/* Text */}
               <div>
                 <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(32px, 4vw, 48px)", fontWeight: 700, lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--text-primary)", marginBottom: "32px" }}>
                   Building software that
                   <span style={{ color: "var(--accent)" }}> solves real problems.</span>
                 </h2>
                 <p style={{ fontSize: "16px", lineHeight: 1.8, color: "var(--text-secondary)", marginBottom: "20px" }}>
-                  I'm Pamod Dhananjana, a Software Engineering student at ICBT Campus
-                  (Cardiff Metropolitan University), currently in my final semester.
-                  I specialise in Java, Android development, and full-stack web applications.
+                  I'm Pamod Dhananjana, a Software Engineering graduate — I recently
+                  completed my Higher National Diploma at ICBT Campus (Cardiff
+                  Metropolitan University). I specialise in full-stack web development,
+                  Android apps, and QA engineering.
                 </p>
                 <p style={{ fontSize: "16px", lineHeight: 1.8, color: "var(--text-secondary)", marginBottom: "20px" }}>
-                  I've built a native Android repair service app, a healthcare web platform
-                  with role-based access control, a SOA-based event management system,
-                  C++ ordering systems, and more. I care deeply about clean code,
-                  Agile collaboration, and strong debugging practices.
+                  My final project, AgriLease, is a web-based agricultural machinery
+                  rental platform built for Sri Lankan farmers — I served as QA &
+                  Integration Specialist and Back-end Developer. I've also shipped a
+                  native Android repair app, a healthcare platform with RBAC, and a
+                  SOA-based event management system.
                 </p>
                 <p style={{ fontSize: "16px", lineHeight: 1.8, color: "var(--text-secondary)", marginBottom: "40px" }}>
-                  Based in Kiribathgoda, Sri Lanka 🇱🇰 — open to internships and
-                  junior roles in Android or full-stack development.
+                  Based in Kiribathgoda, Sri Lanka 🇱🇰 — actively seeking junior developer
+                  roles in Android or full-stack development.
                 </p>
-
-                {/* CTA row — contact + CV download */}
                 <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
                   <a href="#contact" className="btn btn-primary">Let's work together</a>
                   <a
@@ -284,9 +344,9 @@ export default function Home() {
               {/* Stats */}
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2px" }}>
                 {[
-                  { value: "7+",  label: "Real-world projects"              },
+                  { value: "8+",  label: "Real-world projects"              },
                   { value: "3",   label: "Platforms (Web, Android, Systems)" },
-                  { value: "HND", label: "Cardiff Met University"            },
+                  { value: "HND", label: "Cardiff Met University — Completed" },
                   { value: "🇱🇰",  label: "Kiribathgoda, Sri Lanka"          },
                 ].map((stat) => (
                   <div key={stat.label} style={{ background: "var(--bg-card)", border: "1px solid var(--border)", padding: "36px 28px" }}>
@@ -309,13 +369,14 @@ export default function Home() {
               </div>
               <div style={{ flex: 1 }}>
                 <p style={{ fontSize: "11px", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "8px", fontWeight: 600 }}>
-                  Education
+                  Education — Completed
                 </p>
                 <h3 style={{ fontFamily: "var(--font-heading)", fontSize: "20px", fontWeight: 700, color: "var(--text-primary)", marginBottom: "6px" }}>
                   Higher National Diploma in Computer Software Engineering
                 </h3>
                 <p style={{ fontSize: "14px", color: "var(--text-secondary)", marginBottom: "16px" }}>
-                  ICBT Campus — Cardiff Metropolitan University &nbsp;·&nbsp; Nov 2024 – Jun 2026 &nbsp;·&nbsp; Final semester
+                  ICBT Campus — Cardiff Metropolitan University &nbsp;·&nbsp; Nov 2024 – May 2026 &nbsp;·&nbsp;
+                  <span style={{ color: "var(--accent)", fontWeight: 600 }}>Graduated ✓</span>
                 </p>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
                   {["OOP", "Data Structures & Algorithms", "Mobile App Dev", "Web App Dev", "Database Design", "SDLC", "Service-Oriented Computing"].map((m) => (
@@ -335,7 +396,12 @@ export default function Home() {
             <p className="section-label">Selected work</p>
             <h2 className="section-title">Projects</h2>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: "2px" }}>
+            {/* ── Uniform modern card grid — all projects ── */}
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
+              gap: "20px",
+            }}>
               {projects.map((project, i) => (
                 <ProjectCard key={project.title} project={project} index={i} />
               ))}
@@ -388,15 +454,14 @@ export default function Home() {
             <p className="section-label">Get in touch</p>
 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "start" }} className="contact-grid">
-              {/* Left */}
               <div>
                 <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(36px, 5vw, 60px)", fontWeight: 800, lineHeight: 1.05, letterSpacing: "-0.03em", color: "var(--text-primary)", marginBottom: "24px" }}>
                   Let's build<br />something<br /><span style={{ color: "var(--accent)" }}>great.</span>
                 </h2>
                 <p style={{ fontSize: "15px", lineHeight: 1.7, color: "var(--text-secondary)", marginBottom: "40px" }}>
-                  I'm actively looking for internships and junior developer roles in
-                  Android or full-stack development. Feel free to reach out — I'd love
-                  to chat about your project or team.
+                  I recently graduated with my HND and am actively seeking junior developer
+                  roles in Android or full-stack development. Feel free to reach out — I'd
+                  love to chat about your project or team.
                 </p>
 
                 <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
@@ -492,7 +557,6 @@ export default function Home() {
             <p style={{ fontSize: "13px", color: "var(--text-muted)" }}>
               © {new Date().getFullYear()} Pamod Dhananjana — Kiribathgoda, Sri Lanka
             </p>
-            
           </div>
         </footer>
       </main>
@@ -504,7 +568,7 @@ export default function Home() {
         }
         input::placeholder, textarea::placeholder { color: var(--text-muted); }
         @media (max-width: 900px) {
-          .hero-grid    { grid-template-columns: 1fr !important; }
+          .hero-grid { grid-template-columns: 1fr !important; }
           .hero-grid > div:last-child { display: none; }
         }
         @media (max-width: 768px) {
