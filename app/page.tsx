@@ -579,7 +579,7 @@ export default function Home() {
       `}</style>
 {/* WhatsApp Floating Button */}
       
-        href="https://wa.me/94767226743"
+        href="https://api.whatsapp.com/send?phone=94767226743"
         <a
         target="_blank"
         rel="noopener noreferrer"
