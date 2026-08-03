@@ -207,6 +207,13 @@ section {
   animation: fadeUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
 
+/* Skill tile hover */
+.skill-tile:hover {
+  transform: translateY(-3px);
+  border-color: var(--tile-color);
+  box-shadow: 0 8px 24px -8px var(--tile-color);
+}
+
 /* Glow dot */
 .glow-dot {
   width: 6px;

@@ -139,22 +139,61 @@ const projects: Project[] = [
   },
 ];
 
+import {
+  SiCplusplus, SiJavascript, SiPhp, SiMysql,
+  SiHtml5, SiCss, SiDotnet, SiBootstrap, SiTailwindcss,
+  SiAndroidstudio, SiAndroid, SiSqlite, SiMaterialdesign,
+  SiGit, SiGithub, SiFigma, SiPostman, SiJira, SiClickup,
+} from "react-icons/si";
+import { FaJava, FaExchangeAlt, FaFileCode, FaSyncAlt, FaFlask, FaHashtag } from "react-icons/fa";
+
 const skills = [
   {
     category: "Languages",
-    items: ["Java", "C++", "C#", "JavaScript", "PHP", "SQL"],
+    items: [
+      { name: "Java",       icon: FaJava,       color: "#ED8B00" },
+      { name: "C++",        icon: SiCplusplus,  color: "#00599C" },
+      { name: "C#",         icon: FaHashtag,    color: "#239120" },
+      { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+      { name: "PHP",        icon: SiPhp,        color: "#777BB4" },
+      { name: "SQL",        icon: SiMysql,      color: "#4479A1" },
+    ],
   },
   {
     category: "Web Development",
-    items: ["HTML5", "CSS3", "PHP", "AJAX", "ASP.NET Core", "Bootstrap", "Tailwind CSS"],
+    items: [
+      { name: "HTML5",         icon: SiHtml5,       color: "#E34F26" },
+      { name: "CSS3",          icon: SiCss,         color: "#1572B6" },
+      { name: "PHP",           icon: SiPhp,         color: "#777BB4" },
+      { name: "AJAX",          icon: FaExchangeAlt, color: "#00A8E8" },
+      { name: "ASP.NET Core",  icon: SiDotnet,      color: "#512BD4" },
+      { name: "Bootstrap",     icon: SiBootstrap,   color: "#7952B3" },
+      { name: "Tailwind CSS",  icon: SiTailwindcss, color: "#06B6D4" },
+    ],
   },
   {
     category: "Mobile Development",
-    items: ["Android Studio", "Android SDK", "Java (Android)", "XML", "SQLite", "Material Design"],
+    items: [
+      { name: "Android Studio",  icon: SiAndroidstudio, color: "#3DDC84" },
+      { name: "Android SDK",     icon: SiAndroid,       color: "#3DDC84" },
+      { name: "Java (Android)",  icon: FaJava,          color: "#ED8B00" },
+      { name: "XML",             icon: FaFileCode,      color: "#E37933" },
+      { name: "SQLite",          icon: SiSqlite,        color: "#003B57" },
+      { name: "Material Design", icon: SiMaterialdesign,color: "#757575" },
+    ],
   },
   {
     category: "Tools & Methods",
-    items: ["Git", "GitHub", "Figma", "Postman", "Agile / Scrum", "Jira", "ClickUp", "Black-Box Testing"],
+    items: [
+      { name: "Git",                icon: SiGit,      color: "#F05032" },
+      { name: "GitHub",              icon: SiGithub,   color: "#E8FF5A" },
+      { name: "Figma",               icon: SiFigma,    color: "#F24E1E" },
+      { name: "Postman",             icon: SiPostman,  color: "#FF6C37" },
+      { name: "Agile / Scrum",       icon: FaSyncAlt,  color: "#00BFA6" },
+      { name: "Jira",                icon: SiJira,     color: "#0052CC" },
+      { name: "ClickUp",             icon: SiClickup,  color: "#7B68EE" },
+      { name: "Black-Box Testing",   icon: FaFlask,    color: "#C77DFF" },
+    ],
   },
 ];
  
@@ -432,25 +471,44 @@ export default function Home() {
         <div className="divider" />
 
         {/* ── SKILLS ───────────────────────────────────────── */}
-        <section id="skills">
+      <section id="skills">
           <div className="container">
             <p className="section-label">What I work with</p>
             <h2 className="section-title">Skills</h2>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: "2px" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "40px", marginTop: "8px" }}>
               {skills.map((group) => (
-                <div key={group.category} style={{ background: "var(--bg-card)", border: "1px solid var(--border)", padding: "32px" }}>
-                  <p style={{ fontFamily: "var(--font-body)", fontSize: "10px", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "20px" }}>
+                <div key={group.category}>
+                  <p style={{ fontFamily: "var(--font-body)", fontSize: "11px", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: "16px" }}>
                     {group.category}
                   </p>
-                  <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "12px" }}>
-                    {group.items.map((item) => (
-                      <li key={item} style={{ display: "flex", alignItems: "center", gap: "12px", fontSize: "14px", color: "var(--text-secondary)" }}>
-                        <span style={{ width: "4px", height: "4px", borderRadius: "50%", background: "var(--accent)", flexShrink: 0 }} />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: "12px" }}>
+                    {group.items.map((skill) => {
+                      const Icon = skill.icon;
+                      return (
+                        <div
+                          key={skill.name}
+                          className="skill-tile"
+                          style={{
+                            ["--tile-color" as any]: skill.color,
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "12px",
+                            padding: "16px",
+                            background: "var(--bg-card)",
+                            border: "1px solid var(--border)",
+                            borderRadius: "12px",
+                            transition: "transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease",
+                          }}
+                        >
+                          <Icon size={22} color={skill.color} style={{ flexShrink: 0 }} />
+                          <span style={{ fontSize: "13.5px", color: "var(--text-secondary)", fontWeight: 500 }}>
+                            {skill.name}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               ))}
             </div>
