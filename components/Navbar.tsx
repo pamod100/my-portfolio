@@ -6,6 +6,7 @@ const navLinks = [
   { label: "About",    href: "#about"   },
   { label: "Projects", href: "#projects" },
   { label: "Skills",   href: "#skills"  },
+  { label: "Certificates", href: "#certificates" },
   { label: "Contact",  href: "#contact" },
 ];
 
@@ -14,18 +15,18 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [active,   setActive]   = useState("");
 
-  useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 40);
-      const sections = ["about", "projects", "skills", "contact"];
-      for (const id of [...sections].reverse()) {
-        const el = document.getElementById(id);
-        if (el && window.scrollY >= el.offsetTop - 120) { setActive(id); break; }
-      }
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+useEffect(() => {
+  const onScroll = () => {
+    setScrolled(window.scrollY > 40);
+    const sections = ["about", "projects", "skills", "certificates", "contact"];
+    for (const id of [...sections].reverse()) {
+      const el = document.getElementById(id);
+      if (el && window.scrollY >= el.offsetTop - 120) { setActive(id); break; }
+    }
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  return () => window.removeEventListener("scroll", onScroll);
+}, []);
 
   return (
     <>

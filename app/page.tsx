@@ -157,7 +157,17 @@ const skills = [
     items: ["Git", "GitHub", "Figma", "Postman", "Agile / Scrum", "Jira", "ClickUp", "Black-Box Testing"],
   },
 ];
-
+ 
+const certificates = [
+  {
+    title: "One Million Prompters",
+    issuer: "Dubai Future Foundation — Dubai Centre for Artificial Intelligence",
+    description:
+      "Completed the One Million Prompters initiative launched by H.H. Sheikh Hamdan bin Mohammed bin Rashid Al Maktoum, Crown Prince of Dubai, focused on prompt engineering skills for AI systems.",
+    image: "/certificates/one-million-prompters.png",
+    date: "2026",
+  },
+];
 /* ─── Component ─────────────────────────────────────────── */
 
 export default function Home() {
@@ -449,6 +459,44 @@ export default function Home() {
 
         <div className="divider" />
 
+
+        {/* ── CERTIFICATES ─────────────────────────────────── */}
+        <section id="certificates">
+          <div className="container">
+            <p className="section-label">Recognitions</p>
+            <h2 className="section-title">Certificates</h2>
+
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: "20px" }}>
+              {certificates.map((cert) => (
+                <div key={cert.title} style={{ background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: "16px", overflow: "hidden" }}>
+                  <div style={{ position: "relative", width: "100%", aspectRatio: "1.29 / 1", background: "#0a0a0a" }}>
+                    <Image
+                      src={cert.image}
+                      alt={cert.title}
+                      fill
+                      style={{ objectFit: "contain" }}
+                    />
+                  </div>
+                  <div style={{ padding: "24px" }}>
+                    <p style={{ fontSize: "11px", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "8px" }}>
+                      {cert.date}
+                    </p>
+                    <h3 style={{ fontFamily: "var(--font-heading)", fontSize: "18px", fontWeight: 700, color: "var(--text-primary)", marginBottom: "6px" }}>
+                      {cert.title}
+                    </h3>
+                    <p style={{ fontSize: "13px", color: "var(--text-muted)", marginBottom: "12px" }}>
+                      {cert.issuer}
+                    </p>
+                    <p style={{ fontSize: "14px", lineHeight: 1.6, color: "var(--text-secondary)" }}>
+                      {cert.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+<div className="divider" />
         {/* ── CONTACT ──────────────────────────────────────── */}
         <section id="contact">
           <div className="container">
